@@ -3,26 +3,166 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="description" content="Garden Guard Project Website">
+    <title>Garden Guard Project Website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <h1>IOTBD</h1>
-    <ul>
-        <li> <h3> Vision</h3> </li>
-        <li> <h3> Team Members: </h3>
-            <ul>
-                <li> Hayden Stob </li>
-                <li> Moses Kuria </li>
-                <li> Micah Wakefield </li>
-                <li> Matias Frantz </li>
-            </ul>
-        </li>
-        <li> <h3> Code base: </h3> </li>
-        <li> <h3> Report: </h3> </li>
-         <li> <h3> Presentation materials </h3> </li>
-          <li> <h3> Research materials </h3> </li>
-    </ul>
-    <a href="https://computing.calvin.edu/"> <h3> </h3>Calvin Computer Science Department </h3> </a>
-    
+    <header class="site-header">
+        <a class="brand" href="#top" aria-label="Garden Guard Project Website">
+            <span class="brand-mark" aria-hidden="true">✦</span>
+            <span>Garden <strong>Guard</strong></span>
+        </a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+        <nav id="site-nav" class="site-nav" aria-label="Main navigation">
+            <a href="#vision">Vision Statement</a>
+            <a href="#norms">Ethical Considerations</a>
+            <a href="#criteria">Success Criteria</a>
+            <a href="#process">Development Process</a>
+            <a href="#team">Team Members</a>
+            <a href="#contract">Team Contract</a>
+        </nav>
+    </header>
+
+    <main id="top">
+        <section class="report-cover section-shell">
+            <div class="cover-label">Garden Guard Project Website</div>
+            <div class="cover-grid">
+                <div>
+                    <p class="eyebrow">Senior Project · <a href="https://calvin.edu/academics/school-stem/computer-science" target="_blank">Calvin University Computer Science</a></p>
+                    <h1>Garden Guard</h1>
+                </div>
+                <div class="cover-image">
+                    <img src="https://images.unsplash.com/photo-1591857177580-dc82b9ac4e1e?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Vegetable garden with raised planting beds">
+                </div>
+            </div>
+        </section>
+
+        <section id="vision" class="report-section report-section-dark">
+            <div class="section-shell">
+                <div class="section-kicker">01</div>
+                <div class="section-content">
+                    <h2>Vision Statement</h2>
+                    <p>With the increasing popularity of homes featuring interconnected appliances and security oriented doorbell and backyard cameras, there is a growing need for technology that looks after the garden itself and not just the inside of the home. For homeowners who want to monitor their backyard, track garden activity, and keep their plants healthy, Garden Guard is a smart backyard video monitoring system that uses AI to analyze images and real-time data in your garden, so you can enjoy the fruits of your labor. Unlike general purpose security cameras such as Ring or Eufy, Garden Guard focuses on detecting wildlife and other pests to protect and promote the health and growth of your garden.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="team" class="report-section section-shell">
+            <div class="section-kicker">02</div>
+            <div class="section-content">
+                <h2>Team Members</h2>
+                <div class="team-grid">
+                    <article class="team-member">
+                        <div class="member-image" aria-label="Space for an image of Moses Kuria">MK</div>
+                        <div>
+                            <h3>Moses Kuria</h3>
+                            <p class="member-role">LLM Researcher</p>
+                            <p>Space for basic information about Moses Kuria.</p>
+                        </div>
+                    </article>
+                    <article class="team-member">
+                        <div class="member-image" aria-label="Space for an image of Matias Frantz">MF</div>
+                        <div>
+                            <h3>Matias Frantz</h3>
+                            <p class="member-role">Web/App Developer</p>
+                            <p>Space for basic information about Matias Frantz.</p>
+                        </div>
+                    </article>
+                    <article class="team-member">
+                        <div class="member-image" aria-label="Space for an image of Hayden Stob">HS</div>
+                        <div>
+                            <h3>Hayden Stob</h3>
+                            <p class="member-role">Database Manager/Team Representative</p>
+                            <p>Space for basic information about Hayden Stob.</p>
+                        </div>
+                    </article>
+                    <article class="team-member">
+                        <div class="member-image" aria-label="Space for an image of Micah Wakefield">MW</div>
+                        <div>
+                            <h3>Micah Wakefield</h3>
+                            <p class="member-role">Hardware Integration</p>
+                            <p>Space for basic information about Micah Wakefield.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="norms" class="report-section report-section-dark">
+            <div class="section-shell">
+                <div class="section-kicker">03</div>
+                <div class="section-content">
+                    <h2>Ethical Considerations (Design Norms)</h2>
+                    <div class="norms-list">
+                        <article><h3>Cultural Appropriateness</h3><p>Staring at metrics and data from the garden can make people lose touch with actual gardening skills, such as checking soil moisture with their hands. The data collected will be used to complement and verify garden status, prompting the user for direct physical interaction that does not replace the joy of getting your hands dirty.</p></article>
+                        <article><h3>Transparency</h3><p>AI can make mistakes, such as misidentifying pests or animals, so the system must acknowledge its uncertainty level and facilitate user oversight through error reporting. The dashboard will report a confidence score and allow the user to flag misidentifications.</p></article>
+                        <article><h3>Social</h3><p>Gardening can bring friends, families, and communities together, and the system allows for information sharing, thus creating space for greater interaction among users. The system will facilitate a platform to create an online and physical community around gardening, including that of high-tech gardening.</p></article>
+                        <article><h3>Stewardship</h3><p>Adding technology to a garden exposes nature to external materials, but creating proper, weather resistant hardware not only protects the environment, but shows how technology and nature can coexist while still benefitting the environment. The product should be cost effective and not consume more electricity than necessary so that the user can cost-effectively and safely monitor their garden.</p></article>
+                        <article><h3>Delightful Harmony (Aesthetics)</h3><p>Both software and hardware should have an appealing display and still be user friendly, and do so in a balanced way so that usability isn’t affected. The hardware should be easy to install into the garden environment and not affect the visual harmony of the setting. The software should embrace a theme and display data and the garden’s feed in a clean and organized manner.</p></article>
+                        <article><h3>Justice</h3><p>When using AI for both development and image recognition, it is important to recognize when we use code obtained from AI or other sources as well as cite the model we choose. The model will also take accountability and warn the user than it can make mistakes. The final system will respect all copyrights and patents and give credit where credit is due.</p></article>
+                        <article><h3>Caring</h3><p>Many gardeners tend to be older homeowners that could be mobility challenged. Our product not only promotes the health of gardens but also aids handicapped users monitor and care for their garden more easily.</p></article>
+                        <article><h3>Trust</h3><p>When using cameras to collect data, we will ensure complete privacy of imagery obtained and saved within the system. Data and user privacy will be safeguarded within the database and website that is protected from hacking. Human faces are blurred to prevent misuse of camera recording technologies.</p></article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="criteria" class="report-section section-shell">
+            <div class="section-kicker">04</div>
+            <div class="section-content">
+                <h2>Success Criteria</h2>
+                <div class="criteria-list">
+                    <article><h3>Criterion 1: Event-based Dataflow and Hardware Integration</h3><p><strong>Timeline:</strong> End of Fall Semester</p><p><strong>Minimum success threshold:</strong> An raspberry pi with a motion sensor will detect movement events using infrared waves and trigger a camera to take a snapshot of whatever activated it. Image and associated telemetry data will be posted to the database so that it can be viewable within the application.</p><p><strong>Stretch goal:</strong> The camera live feed will use AI to detect events, take a snapshot, and upload all associated telemetry data to the database viewable within the web app.</p></article>
+                    <article><h3>Criterion 2:  Web Application Functionality</h3><p><strong>Timeline:</strong> End of Fall Semester</p><p><strong>Minimum success threshold:</strong> The web application will display a live feed as well as historical event snapshots and live telemetry data using MQTT through an asthetic UI.</p><p><strong>Stretch goal:</strong> Integrate the web app into a mobile version that sends notifications when important events occur.</p></article>
+                    <article><h3>Criterion 3:  Plant Health Monitoring Extention</h3><p><strong>Timeline:</strong> End of Spring Semester</p><p><strong>Minimum success threshold:</strong> The camera and sensor system will monitor plant health with AI detection combined with moisture readings to inform the user when it should be watered or cared for.</p><p><strong>Stretch goal:</strong> The AI will tell the user when fruits or vegetables are ready for harvest and display other helpful growth indicators and data.</p></article>
+                    <article><h3>Criterion 4: Automated Responses and Countermeasures</h3><p><strong>Timeline:</strong> End of Spring Semester</p><p><strong>Minimum success threshold:</strong> Events, whether plant or animal based, are able to be automatically responded to within the app. The user is able select which action they want to take, and if the systems has approval to automatically deploy it.</p><p><strong>Stretch goal:</strong> Plants are automatically watered while the user is away from their garden or pests are chased away from the garden with a sound system.</p></article>
+                </div>
+            </div>
+        </section>
+
+        <section id="process" class="report-section report-section-dark">
+            <div class="section-shell">
+                <div class="section-kicker">05</div>
+                <div class="section-content">
+                    <h2>Development Process</h2>
+                    <h3>Scheduling &amp; Time Commitment</h3>
+                    <p>Team meetings are held weekly on Thursdays at 2:30 PM. Meetings with our project advisor are held weekly on Fridays during chapel break to ensure up to date progress is being reported by each team member and their contributions can be asessed. Each team member is expected to contribute 5-6 hours of work per week.</p>
+                    <h3>Communication</h3>
+                    <p>Meetings are scheduled and issues are discussed through Microsoft Teams.</p>
+                    <h3>Task Management</h3>
+                    <p>Time is tracked through Clockify and overall task management is done via a Trello Board. Code and development specific tasks are managed through Github Projects. Reports are written with Google Docs.</p>
+                    <h3>Workflow</h3>
+                    <p>Code implementation is done with GitHub flow, which avoids direct pushes to the main branch a requires developers to submit a PR for review and approve by at least one other team member. Branches should be named according to their purpose: feature/feature-name, bugfix/bug-name. Coding standards will be enforced via Eslint and new features will be implemented with Test Driven Development (TDD), where new commits trigger and should pass a CI pipeline to smoothly integrate new features.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contract" class="report-section section-shell">
+            <div class="section-kicker">06</div>
+            <div class="section-content">
+                <h2>Garden Guard Team Contract</h2>
+                <p>In order to ensure successful collaboration, we have agreed to the workflow outlined in this report (see development process) as well as the following practices:</p>
+                <p>Each team member assumes a primary technical role. This may be rotated later in the semester but this specialization allows for dividing responsibilities effectively.</p>
+                <p>Weekly tasks will be agreed upon each Thursday. Team members will come individually prepared with the previous weeks tasks completed. After individual task review and challenges are assessed, we will reach a consensus on next steps.</p>
+                <p>During advisor meetings, similar individual progress reports will be given as well as our agreed upon design choices and task assignment from the previous day, and adjustments will be made accordingly base on advisor feedback.</p>
+                <p>Team members are encouraged to collaborate and work on tasks together outside of meeting times when possible and use the communication channels throughout the week to keep each other updated.</p>
+                <h2 class="subheading">Conflict Resolution</h2>
+                <p>In the event of technical or design disagreements, if a consensus cannot be reached, final decisions will be settled by a majority vote among team members. If a decision remains split, the Project Advisor will cast a vote to finalize the decision.</p>
+                <p>Unresolved interpersonal or participation issues will be escalated promptly to the Project Advisor or course instructor.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="section-shell footer-inner">
+            <span>Garden Guard</span>
+            <span>Calvin University Computer Science 2026-2027</span>
+        </div>
+    </footer>
 </body>
 </html>
