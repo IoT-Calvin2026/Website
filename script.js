@@ -12,12 +12,3 @@ siteNav?.querySelectorAll("a").forEach((link) => {
         menuToggle?.setAttribute("aria-expanded", "false");
     });
 });
-
-document.querySelectorAll("details").forEach((detail) => {
-    detail.addEventListener("toggle", () => {
-        if (!detail.open) return;
-        document.querySelectorAll("details[open]").forEach((otherDetail) => {
-            if (otherDetail !== detail) otherDetail.open = false;
-        });
-    });
-});
